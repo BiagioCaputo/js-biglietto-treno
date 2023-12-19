@@ -22,19 +22,15 @@ const price40 = price - price * 40 / 100;
 
 //recupero il prezzo applicando eventualmente lo sconto
 
-if (userAge < 65 && userAge > 17){
-    finalPrice.innerText =  price.toFixed(2);
+if (userAge < 18){
+    finalPrice.innerText =  price20.toFixed(2);
+}
+
+else if (userAge > 65){
+    finalPrice.innerText = price40.toFixed(2); 
 }
 
 else{
-
-    if (userAge < 18){
-        finalPrice.innerText = price20.toFixed(2);
-    }
-    
-    else{
-        finalPrice.innerText = price40.toFixed(2); 
-    }
-    
+    finalPrice.innerText = price.toFixed(2);
 }
 
